@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://eml-analyzer.herokuapp.com/#/ -->
+<html lang="en" class="theme-light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 7 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 7 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 7 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 7 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 7 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-slab-regular: normal 400 1em/1 "Font Awesome 7 Slab";
+  --fa-font-slab-press-regular: normal 400 1em/1 "Font Awesome 7 Slab Press";
+  --fa-font-whiteboard-semibold: normal 600 1em/1 "Font Awesome 7 Whiteboard";
+  --fa-font-thumbprint-light: normal 300 1em/1 "Font Awesome 7 Thumbprint";
+  --fa-font-notdog-solid: normal 900 1em/1 "Font Awesome 7 Notdog";
+  --fa-font-notdog-duo-solid: normal 900 1em/1 "Font Awesome 7 Notdog Duo";
+  --fa-font-etch-solid: normal 900 1em/1 "Font Awesome 7 Etch";
+  --fa-font-jelly-regular: normal 400 1em/1 "Font Awesome 7 Jelly";
+  --fa-font-jelly-fill-regular: normal 400 1em/1 "Font Awesome 7 Jelly Fill";
+  --fa-font-jelly-duo-regular: normal 400 1em/1 "Font Awesome 7 Jelly Duo";
+  --fa-font-chisel-regular: normal 400 1em/1 "Font Awesome 7 Chisel";
+}
+
+.svg-inline--fa {
+  box-sizing: content-box;
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285714em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left,
+.svg-inline--fa .fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-pull-right,
+.svg-inline--fa .fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.fa-layers .svg-inline--fa {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xs {
+  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-sm {
+  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-lg {
+  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xl {
+  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-2xl {
+  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-width-auto {
+  --fa-width: auto;
+}
+
+.fa-fw,
+.fa-width-fixed {
+  --fa-width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-inline-start: var(--fa-li-margin, 2.5em);
+  padding-inline-start: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+/* Heads Up: Bordered Icons will not be supported in the future!
+  - This feature will be deprecated in the next major release of Font Awesome (v8)!
+  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.
+*/
+/* Notes:
+* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)
+* --@{v.$css-prefix}-border-padding =
+  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)
+  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)
+*/
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.0625em);
+  box-sizing: var(--fa-border-box-sizing, content-box);
+  padding: var(--fa-border-padding, 0.1875em 0.25em);
+}
+
+.fa-pull-left,
+.fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right,
+.fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+  .fa-bounce,
+  .fa-fade,
+  .fa-beat-fade,
+  .fa-flip,
+  .fa-pulse,
+  .fa-shake,
+  .fa-spin,
+  .fa-spin-pulse {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.svg-inline--fa.fa-inverse {
+  fill: var(--fa-inverse, #fff);
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}</style><link rel="icon" href="https://eml-analyzer.herokuapp.com/favicon.ico">
+    <title>EML Analyzer</title>
+    <script type="module" crossorigin="" src="./EML Analyzer_files/index-Do6toZYC.js.download"></script>
+    <link rel="stylesheet" crossorigin="" href="./EML Analyzer_files/index-ZKa-er88.css">
+  <style id="sweezy-cursors--styles">
+      body a,
+      body button,
+      body [type='button'],
+      body input[type='reset'],
+      body input[type='submit'],
+      body [role="button"],
+      ::-webkit-search-cancel-button,
+      ::-webkit-search-decoration,
+      ::-webkit-scrollbar-button, 
+      ::-webkit-file-upload-button,
+      body .sweezy-custom-cursor-hover,
+      body button.sweezy-custom-cursor-hover,
+      body a.sweezy-custom-cursor-hover {
+        cursor: url("data:image/png;base64,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") 4 1, pointer !important;
+      }
+    
+      html,
+      body,
+      body select,
+      body .sweezy-custom-cursor-default-hover {
+        cursor: url("data:image/png;base64,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") 0 1, auto !important;
+      }
+    </style><link rel="modulepreload" as="script" crossorigin="" href="https://eml-analyzer.herokuapp.com/assets/html-B8pBdPMQ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eml-analyzer.herokuapp.com/assets/javascript-BMMyXqK5.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eml-analyzer.herokuapp.com/assets/css-DPfMkruS.js"></head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but EML Analyzer doesn't work properly without JavaScript enabled. Please
+        enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app" data-v-app=""><nav class="navbar shadow-md"><div class="navbar-start"><a class="btn btn-ghost text-xl"><h1 class="text-2xl font-bold">EML Analyzer</h1></a><div class="hidden lg:flex"><ul class="menu menu-horizontal px-1"><li><a href="https://eml-analyzer.herokuapp.com/#/" class="router-link-active router-link-exact-active btn btn-ghost" aria-current="page">Home</a></li><li><a href="https://eml-analyzer.herokuapp.com/#/cache" class="btn btn-ghost">Cache</a></li><li><a href="https://eml-analyzer.herokuapp.com/docs" target="_blank" class="btn btn-ghost">API</a></li><li><a href="https://github.com/ninoseki/eml_analyzer" target="_blank" class="btn btn-ghost">GitHub</a></li></ul></div></div><div class="navbar-end"><div class="flex flex-wrap gap-2"><span class="badge badge-warning">Cache</span><span class="badge badge-warning">EmailRep</span><span class="badge badge-warning">VirusTotal</span><span class="badge badge-warning">InQuest</span><span class="badge badge-warning">urlscan.io</span></div><input type="checkbox" class="toggle theme-controller ml-2" value="synthwave"></div></nav><section class="py-16"><div class="container mx-auto px-4"><div data-v-67ab2241="" class="grid gap-4"><div data-v-67ab2241="" class="alert border-info"><svg data-v-67ab2241="" class="svg-inline--fa fa-circle-info w-6 h-6 mr-2" data-prefix="fas" data-icon="circle-info" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zM224 160a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm-8 64l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24z"></path></svg><ul data-v-67ab2241="" class="list-disc list-inside space-y-1"><li data-v-67ab2241="">EML (<b data-v-67ab2241="">.eml</b>) and MSG (<b data-v-67ab2241="">.msg</b>) formats are supported.</li><li data-v-67ab2241=""> The MSG file will be converted to the EML file before analyzing. The conversion might be lossy. </li><li data-v-67ab2241="">This app doesn't store EML/MSG file you upload.</li></ul></div><div data-v-67ab2241="" class="w-full flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md upload-draggable sweezy-custom-cursor-hover" style="null;cursor: url(&quot;data:image/png;base64,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&quot;) 4 1, pointer !important;"><div data-v-67ab2241="" class="text-center py-16"><p data-v-67ab2241=""><span data-v-67ab2241="" class="text-4xl"><svg data-v-67ab2241="" class="svg-inline--fa fa-upload" data-prefix="fas" data-icon="upload" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M256 109.3L256 320c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-210.7-41.4 41.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l96-96c12.5-12.5 32.8-12.5 45.3 0l96 96c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 109.3zM224 400c44.2 0 80-35.8 80-80l80 0c35.3 0 64 28.7 64 64l0 32c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64l0-32c0-35.3 28.7-64 64-64l80 0c0 44.2 35.8 80 80 80zm144 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"></path></svg></span></p><p data-v-67ab2241="" class="mt-4">Drop the EML/MSG file here or click to upload</p></div><input data-v-67ab2241="" type="file" class="sweezy-custom-cursor-hover" style="null;cursor: url(&quot;data:image/png;base64,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&quot;) 4 1, pointer !important;"></div><div data-v-67ab2241="" class="text-center"><p data-v-67ab2241="" class="mb-4">BRADESCO LIVELO.eml</p><button data-v-67ab2241="" class="btn btn-primary"><svg data-v-67ab2241="" class="svg-inline--fa fa-magnifying-glass w-4 h-4" data-prefix="fas" data-icon="magnifying-glass" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg> Analyze </button></div></div><div data-v-67ab2241="" class="flex w-full flex-col"><div class="divider"></div></div><!----><!----><div data-v-67ab2241="" class="grid gap-4"><!----><div class="grid gap-4"><h2 class="text-2xl font-bold middle">Verdicts</h2><div class="card border-1 border-success grid gap-4"><div class="card-body"><h3 class="card-title text-base">SpamAssassin <div class="badge">0.30</div></h3><ul class="list"><li class="list-row"><div>ADMINISTRATOR NOTICE: The query to dbl.spamhaus.org was blocked due to usage of an open resolver. See <a href="https://www.spamhaus.org/returnc/pub/">https://www.spamhaus.org/returnc/pub/</a> [URI: fonts.googleapis.com] [URI: blog1seguimentmydomaine2bra.me]</div><div><span class="badge">N/A</span></div><!----></li><li class="list-row"><div>To: has a malformed address</div><div><span class="badge">0.10</span></div><!----></li><li class="list-row"><div>BODY: HTML included in message</div><div><span class="badge">N/A</span></div><!----></li><li class="list-row"><div>BODY: HTML has unbalanced "body" tags</div><div><span class="badge">0.10</span></div><!----></li><li class="list-row"><div>BODY: Message only has text/html MIME parts</div><div><span class="badge">0.10</span></div><!----></li></ul></div></div><div class="card border-1 border-success grid gap-4"><div class="card-body"><h3 class="card-title text-base">oleid <div class="badge">N/A</div></h3><ul class="list"><li class="list-row"><div>There is no suspicious OLE file in attachments.</div><div><span class="badge">N/A</span></div><!----></li></ul></div></div></div><h2 class="text-2xl font-bold middle">Headers</h2><div><h3 class="text-lg font-bold">Hops</h3><table class="table w-full break-all"><thead><tr><th>Hop</th><th>From</th><th>By</th><th>With</th><th>Date (UTC)</th><th>Delay</th></tr></thead><tbody><tr><td>1</td><td></td><td></td><td></td><td>2023-09-19T18:35:49Z</td><td><div>N/A</div></td></tr><tr><td>2</td><td>137.184.34.4</td><td>bn8nam11ft066.mail.protection.outlook.com, 10.13.177.138</td><td>microsoft smtp server (version=tls1_2, cipher=tls_ecdhe_rsa_with_aes_256_gcm_sha384) id 15.20.6813.19 via frontend transport</td><td>2023-09-19T18:36:44Z</td><td><div>a minute</div></td></tr><tr><td>3</td><td>bn8nam11ft066.eop-nam11.prod.protection.outlook.com, 2603:10b6:408:e6:cafe::23</td><td>2603:10b6:408:e6::28, bn0pr03ca0023.outlook.office365.com</td><td>microsoft smtp server (version=tls1_2, cipher=tls_ecdhe_rsa_with_aes_256_gcm_sha384) id 15.20.6792.28 via frontend transport</td><td>2023-09-19T18:36:45Z</td><td><div>a few seconds</div></td></tr><tr><td>4</td><td>2603:10b6:408:e6::28, bn0pr03ca0023.namprd03.prod.outlook.com</td><td>2603:10b6:806:317::17, sa3pr19mb7370.namprd19.prod.outlook.com</td><td>microsoft smtp server (version=tls1_2, cipher=tls_ecdhe_rsa_with_aes_256_gcm_sha384) id 15.20.6792.27</td><td>2023-09-19T18:36:45Z</td><td><div>N/A</div></td></tr><tr><td>5</td><td>::1, sa3pr19mb7370.namprd19.prod.outlook.com</td><td>mn0pr19mb6312.namprd19.prod.outlook.com</td><td>https</td><td>2023-09-19T18:36:46Z</td><td><div>a few seconds</div></td></tr></tbody></table></div><h3 class="text-lg font-bold">Basic headers</h3><table class="table w-full break-all"><tbody><tr><th class="w-80">Message ID</th><td>&lt;20230919183549.39DEA3F725@ubuntu-s-1vcpu-1gb-35gb-intel-sfo3-06&gt;</td></tr><tr><th class="w-80">Subject</th><td>CLIENTE PRIME - BRADESCO LIVELO: Seu cartão tem 92.990 pontos LIVELO expirando hoje!</td></tr><tr><th class="w-80">Date (UTC)</th><td>2023-09-19T18:35:49Z</td></tr><tr><th class="w-80">From</th><td><div class="dropdown dropdown-end dropdown-hover"><div tabindex="0" role="button" class="btn"><span>banco.bradesco@atendimento.com.br</span><svg class="svg-inline--fa fa-angle-down w-4 h-4" data-prefix="fas" data-icon="angle-down" role="img" viewBox="0 0 384 512" aria-hidden="true"><path class="" fill="currentColor" d="M169.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 306.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path></svg></div><ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"><li><a><svg class="svg-inline--fa fa-copy w-4 h-4" data-prefix="fas" data-icon="copy" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-200.6c0-17.4-7.1-34.1-19.7-46.2L370.6 17.8C358.7 6.4 342.8 0 326.3 0L192 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-16-64 0 0 16-192 0 0-256 16 0 0-64-16 0z"></path></svg><span>Copy to clipboard</span></a></li><li><a href="https://emailrep.io/banco.bradesco@atendimento.com.br" target="_blank"><img src="./EML Analyzer_files/faviconV2" alt="favicon" class="w-4 h-4"><span>EmailRep</span></a></li></ul></div></td></tr><tr><th class="w-80">To</th><td><div class="dropdown dropdown-end dropdown-hover"><div tabindex="0" role="button" class="btn"><span>phishing@pot</span><svg class="svg-inline--fa fa-angle-down w-4 h-4" data-prefix="fas" data-icon="angle-down" role="img" viewBox="0 0 384 512" aria-hidden="true"><path class="" fill="currentColor" d="M169.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 306.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path></svg></div><ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"><li><a><svg class="svg-inline--fa fa-copy w-4 h-4" data-prefix="fas" data-icon="copy" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-200.6c0-17.4-7.1-34.1-19.7-46.2L370.6 17.8C358.7 6.4 342.8 0 326.3 0L192 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-16-64 0 0 16-192 0 0-256 16 0 0-64-16 0z"></path></svg><span>Copy to clipboard</span></a></li></ul></div></td></tr><!----></tbody></table><div><h3 class="text-lg font-bold">Security headers</h3><table class="table w-full break-all"><tbody><tr><th class="w-80">authentication-results</th><td>spf=temperror (sender IP is 137.184.34.4) smtp.mailfrom=ubuntu-s-1vcpu-1gb-35gb-intel-sfo3-06; dkim=none (message not signed) header.d=none;dmarc=temperror action=none header.from=atendimento.com.br;compauth=fail reason=001</td></tr></tbody></table></div><div><h3 class="text-lg font-bold">X headers</h3><table class="table w-full break-all"><tbody><tr><th class="w-80">x-incomingtopheadermarker</th><td> OriginalChecksum:3B61F64750F88C5569DF38A496B2374685F23D8BC662A6A19B6823B2F6745D54;UpperCasedChecksum:62071BC7A7CF5B0844A7B406B0E9EFCDAA2CB94988E687CF8C56555AD4B52D30;SizeAsReceived:544;Count:9</td></tr><tr><th class="w-80">x-microsoft-antispam</th><td>BCL:9;</td></tr><tr><th class="w-80">x-eoptenantattributedmessage</th><td>84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0</td></tr><tr><th class="w-80">x-ms-exchange-organization-authsource</th><td> BN8NAM11FT066.eop-nam11.prod.protection.outlook.com</td></tr><tr><th class="w-80">x-incomingheadercount</th><td>9</td></tr><tr><th class="w-80">x-ms-exchange-organization-network-message-id</th><td> b9106deb-bd54-4815-e5c9-08dbb93f5fab</td></tr><tr><th class="w-80">x-ms-exchange-crosstenant-fromentityheader</th><td>Internet</td></tr><tr><th class="w-80">x-ms-exchange-transport-crosstenantheadersstamped</th><td>SA3PR19MB7370</td></tr><tr><th class="w-80">x-message-info</th><td>	qZelhIiYnPlgo3oeAkqKQrb/Je8fpvpPmRGjYwLej8PYXc5p/l16IG5I8gDUPoij+JWSvja0BAMLtkgrOcbx5zEN7V98T2UZUZs4k8BX/DcDfI7QJ0t2aouiqx4ENvkR1M3sDKP/XN09+50x9Rxi6onUtDV4eqq36VUi2qAa0zCzkJwjdl3Y9DzNE1OkaWjrHAizeUyMZ/UtK/Pz9zhA2A==</td></tr><tr><th class="w-80">x-ms-exchange-crosstenant-id</th><td>84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa</td></tr><tr><th class="w-80">x-ms-exchange-organization-expirationstarttimereason</th><td>OriginalSubmit</td></tr><tr><th class="w-80">x-ms-exchange-crosstenant-network-message-id</th><td>b9106deb-bd54-4815-e5c9-08dbb93f5fab</td></tr><tr><th class="w-80">x-ms-exchange-processed-by-bccfoldering</th><td>15.20.6792.025</td></tr><tr><th class="w-80">x-ms-exchange-organization-expirationintervalreason</th><td>OriginalSubmit</td></tr><tr><th class="w-80">x-ms-publictraffictype</th><td>Email</td></tr><tr><th class="w-80">x-ms-exchange-crosstenant-originalarrivaltime</th><td>19 Sep 2023 18:36:44.1298 (UTC)</td></tr><tr><th class="w-80">x-message-delivery</th><td>Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MTtHRD0yO1NDTD0tMQ==</td></tr><tr><th class="w-80">x-ms-exchange-crosstenant-rms-persistedconsumerorg</th><td> 00000000-0000-0000-0000-000000000000</td></tr><tr><th class="w-80">x-ms-exchange-eopdirect</th><td>true</td></tr><tr><th class="w-80">x-ms-exchange-organization-messagedirectionality</th><td>Incoming</td></tr><tr><th class="w-80">x-ms-exchange-transport-endtoendlatency</th><td>00:00:02.6179349</td></tr><tr><th class="w-80">x-ms-userlastlogontime</th><td>9/19/2023 6:25:15 PM</td></tr><tr><th class="w-80">x-ms-exchange-crosstenant-authas</th><td>Anonymous</td></tr><tr><th class="w-80">x-microsoft-antispam-message-info</th><td>	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</td></tr><tr><th class="w-80">x-sid-pra</th><td>BANCO.BRADESCO@ATENDIMENTO.COM.BR</td></tr><tr><th class="w-80">x-ms-traffictypediagnostic</th><td> BN8NAM11FT066:EE_|SA3PR19MB7370:EE_|MN0PR19MB6312:EE_</td></tr><tr><th class="w-80">x-ms-exchange-organization-expirationstarttime</th><td>19 Sep 2023 18:36:44.2236 (UTC)</td></tr><tr><th class="w-80">x-sid-result</th><td>NONE</td></tr><tr><th class="w-80">x-ms-exchange-crosstenant-authsource</th><td> BN8NAM11FT066.eop-nam11.prod.protection.outlook.com</td></tr><tr><th class="w-80">x-ms-office365-filtering-correlation-id</th><td>b9106deb-bd54-4815-e5c9-08dbb93f5fab</td></tr><tr><th class="w-80">x-ms-exchange-organization-expirationinterval</th><td>1:00:00:00.0000000</td></tr><tr><th class="w-80">x-sender-ip</th><td>137.184.34.4</td></tr><tr><th class="w-80">x-ms-exchange-organization-pcl</th><td>2</td></tr><tr><th class="w-80">x-microsoft-antispam-mailbox-delivery</th><td>	wl:1;pcwl:1;ucf:0;jmr:0;ex:0;psp:0;auth:0;dest:I;OFR:TrustedSenderList;ENG:(5062000305)(920221119095)(90000117)(920221120095)(91040095)(9050020)(9075021)(9100341)(944500132)(2008001134)(4810010)(4910033)(9610028)(9560006)(10180021)(9439006)(9310011)(9220031)(120001);</td></tr><tr><th class="w-80">x-ms-exchange-organization-authas</th><td>Anonymous</td></tr><tr><th class="w-80">x-ms-exchange-organization-scl</th><td>5</td></tr><tr><th class="w-80">x-eopattributedmessage</th><td>0</td></tr></tbody></table></div><div><h3 class="text-lg font-bold">Other headers</h3><table class="table w-full break-all"><tbody><tr><th class="w-80">mime-version</th><td>1.0</td></tr><tr><th class="w-80">received-spf</th><td>TempError (protection.outlook.com: error in processing during lookup of ubuntu-s-1vcpu-1gb-35gb-intel-sfo3-06: DNS Timeout)</td></tr><tr><th class="w-80">content-type</th><td>text/html; charset="UTF-8"</td></tr><tr><th class="w-80">return-path</th><td>root@ubuntu-s-1vcpu-1gb-35gb-intel-sfo3-06</td></tr><tr><th class="w-80">content-transfer-encoding</th><td>base64</td></tr></tbody></table></div><h2 class="text-2xl font-bold middle">Bodies</h2><div role="tablist" class="tabs tabs-border justify-center"><a role="tab" class="tab tab-active" body="[object Object]">1</a></div><div class="grid grid-cols-2"><div class="mockup-code w-full h-96 overflow-scroll px-6 my-4 bg-[#0d1117]"><pre class="shiki github-dark-default" style="background-color:#0d1117;color:#e6edf3" tabindex="0"><code><span class="line"><span style="color:#E6EDF3">&lt;!</span><span style="color:#7EE787">DOCTYPE</span><span style="color:#79C0FF"> html</span><span style="color:#E6EDF3">&gt;&lt;</span><span style="color:#7EE787">html</span><span style="color:#79C0FF"> lang</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"en"</span><span style="color:#E6EDF3">&gt;&lt;</span><span style="color:#7EE787">head</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"><span style="color:#E6EDF3">&lt;</span><span style="color:#7EE787">meta</span><span style="color:#79C0FF"> http-equiv</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"Content-Type"</span><span style="color:#79C0FF"> content</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"text/html; charset=utf-8"</span><span style="color:#E6EDF3">&gt;&lt;</span><span style="color:#7EE787">body</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"background-color:rgb(241, 241, 241);"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">	&lt;</span><span style="color:#7EE787">p</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"text-align:center;"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">		&lt;</span><span style="color:#FFA198;font-style:italic">font</span><span style="color:#79C0FF"> face</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"Arial"</span><span style="color:#79C0FF"> size</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"2"</span><span style="color:#E6EDF3">&gt;Para visualizar as imagens deste email. &lt;</span><span style="color:#7EE787">a</span><span style="color:#79C0FF"> href</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"https://blog1seguimentmydomaine2bra.me/"</span><span style="color:#E6EDF3">&gt;Clique aqui&lt;/</span><span style="color:#7EE787">a</span><span style="color:#E6EDF3">&gt;&lt;/</span><span style="color:#FFA198;font-style:italic">font</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">	&lt;/</span><span style="color:#7EE787">p</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">    </span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">    &lt;</span><span style="color:#7EE787">meta</span><span style="color:#79C0FF"> http-equiv</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"X-UA-Compatible"</span><span style="color:#79C0FF"> content</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"IE=edge"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">    &lt;</span><span style="color:#7EE787">meta</span><span style="color:#79C0FF"> name</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"viewport"</span><span style="color:#79C0FF"> content</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"width=device-width, initial-scale=1.0"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">    &lt;</span><span style="color:#7EE787">link</span><span style="color:#79C0FF"> rel</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"preconnect"</span><span style="color:#79C0FF"> href</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"https://fonts.gstatic.com"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">    &lt;</span><span style="color:#7EE787">link</span><span style="color:#79C0FF"> href</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"https://fonts.googleapis.com/css2?family=Signika:wght@300;500;700</span><span style="color:#FF7B72">&amp;amp;</span><span style="color:#A5D6FF">display=swap"</span><span style="color:#79C0FF"> rel</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"stylesheet"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">    &lt;</span><span style="color:#7EE787">title</span><span style="color:#E6EDF3">&gt;Pontos Livelo&lt;/</span><span style="color:#7EE787">title</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">&lt;/</span><span style="color:#7EE787">head</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">&lt;</span><span style="color:#7EE787">body</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"background-color:#eeeeee;"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">    &lt;</span><span style="color:#7EE787">div</span><span style="color:#79C0FF"> id</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"bg"</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"width: 602px; margin: 0 auto; padding: 15px;background-color: #fff;"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">        &lt;</span><span style="color:#7EE787">div</span><span style="color:#79C0FF"> id</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"bg"</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"width: 100%; margin: 0 auto; padding: 0px 15px 15px 15px; border: 2px solid #e50091;box-sizing: border-box;"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;</span><span style="color:#7EE787">div</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"text-align: center; margin-bottom: 30px;"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                &lt;</span><span style="color:#7EE787">img</span><span style="color:#79C0FF"> src</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"header.png"</span><span style="color:#79C0FF"> alt</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">""</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;/</span><span style="color:#7EE787">div</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;</span><span style="color:#7EE787">div</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"text-align: center;"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                &lt;</span><span style="color:#7EE787">img</span><span style="color:#79C0FF"> src</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"icone-superior.png"</span><span style="color:#79C0FF"> alt</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">""</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;/</span><span style="color:#7EE787">div</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;</span><span style="color:#7EE787">div</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"text-align: center;"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                &lt;</span><span style="color:#7EE787">h1</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"font-family: 'Signika', sans-serif; font-weight: 700;color: #190f55;font-size: 26px;padding-top: 0px;margin-top: 0px;"</span><span style="color:#E6EDF3">&gt;Banco do Bradesco (Livelo). &lt;/</span><span style="color:#7EE787">h1</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;/</span><span style="color:#7EE787">div</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;</span><span style="color:#7EE787">div</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                &lt;</span><span style="color:#7EE787">p</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"font-family: 'Signika', sans-serif; font-weight: 300; color: #707070; font-size: 16px; line-height: 18px;"</span><span style="color:#E6EDF3">&gt;Você possui &lt;</span><span style="color:#7EE787">strong</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"color:#190f55;"</span><span style="color:#E6EDF3">&gt;Pontos Livelo com seu cartão Banco do Bradesco&lt;/</span><span style="color:#7EE787">strong</span><span style="color:#E6EDF3">&gt; disponíveis para resgate que expiram HOJE, evite a perda destes pontos realizando agora mesmo o resgate da sua Pontuação Visa Infinite.&lt;/</span><span style="color:#7EE787">p</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;/</span><span style="color:#7EE787">div</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;</span><span style="color:#7EE787">div</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"margin-bottom:30px;"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                &lt;</span><span style="color:#7EE787">p</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"font-family: 'Signika', sans-serif; font-weight: 300; color: #707070; font-size: 16px; line-height: 18px;"</span><span style="color:#E6EDF3">&gt;Você Clientes &lt;</span><span style="color:#7EE787">strong</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"color:#190f55;"</span><span style="color:#E6EDF3">&gt;Banco do Bradesco&lt;/</span><span style="color:#7EE787">strong</span><span style="color:#E6EDF3">&gt; acumulam pontos livelo todas as vezes que utilizam seus cartões na função débito ou crédito, é rápido e fácil de acumular.&lt;/</span><span style="color:#7EE787">p</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;/</span><span style="color:#7EE787">div</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;</span><span style="color:#7EE787">div</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"background-color:#FF0080; border-radius:20px;margin-bottom: 40px;"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                &lt;</span><span style="color:#7EE787">table</span><span style="color:#79C0FF"> width</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"100%"</span><span style="color:#79C0FF"> cellspacing</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"0"</span><span style="color:#79C0FF"> cellpadding</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"0"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                    &lt;</span><span style="color:#7EE787">tr</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                      &lt;</span><span style="color:#7EE787">td</span><span style="color:#79C0FF"> width</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"60%"</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"padding-left:20px;padding-top: 30px; padding-bottom: 30px;"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                        &lt;</span><span style="color:#7EE787">p</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"font-family: 'Signika', sans-serif; font-weight: 300; color: #ffff; font-size: 14px; line-height: 18px; margin:0px;padding:0px;"</span><span style="color:#E6EDF3">&gt;&lt;</span><span style="color:#7EE787">span</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"font-weight: 500;"</span><span style="color:#E6EDF3">&gt;Troque seus pontos por milhas aéreas&lt;/</span><span style="color:#7EE787">span</span><span style="color:#E6EDF3">&gt; &lt;/</span><span style="color:#7EE787">p</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                        &lt;</span><span style="color:#7EE787">p</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"font-family: 'Signika', sans-serif; font-weight: 300; color: #ffff; font-size: 14px; line-height: 18px; margin:0px;padding:0px;"</span><span style="color:#E6EDF3">&gt;&lt;</span><span style="color:#7EE787">span</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"font-weight: 500;"</span><span style="color:#E6EDF3">&gt;Descontos de até 35% na fatura do cartão&lt;/</span><span style="color:#7EE787">span</span><span style="color:#E6EDF3">&gt; &lt;/</span><span style="color:#7EE787">p</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                        &lt;</span><span style="color:#7EE787">p</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"font-family: 'Signika', sans-serif; font-weight: 300; color: #ffff; font-size: 14px; line-height: 18px; margin:0px;padding:0px;"</span><span style="color:#E6EDF3">&gt;&lt;</span><span style="color:#7EE787">span</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"font-weight: 500;"</span><span style="color:#E6EDF3">&gt;&lt;/</span><span style="color:#7EE787">span</span><span style="color:#E6EDF3">&gt;&lt;/</span><span style="color:#7EE787">p</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                      &lt;/</span><span style="color:#7EE787">td</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                      &lt;</span><span style="color:#7EE787">td</span><span style="color:#79C0FF"> width</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"40%"</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"padding-right:20px;"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                        &lt;</span><span style="color:#7EE787">div</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"border-left: 1px solid #fff; padding-left:40px;padding-top: 0px;padding-bottom: 0px;"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                            &lt;</span><span style="color:#7EE787">h2</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"font-family: 'Signika', sans-serif; font-weight: 700;color: #fff;font-size: 36px;padding: 0px;margin: 0px;"</span><span style="color:#E6EDF3">&gt;92.990&lt;/</span><span style="color:#7EE787">h2</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                            &lt;</span><span style="color:#7EE787">p</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"font-family: 'Signika', sans-serif; font-weight: 300;color: #fff;font-size: 10px;padding: 0px;margin: 0px;"</span><span style="color:#E6EDF3">&gt;MIL PONTOS ACUMULADOS EXPIRAM HOJE&lt;/</span><span style="color:#7EE787">p</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                        &lt;/</span><span style="color:#7EE787">div</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                      &lt;/</span><span style="color:#7EE787">td</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                    &lt;/</span><span style="color:#7EE787">tr</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                  &lt;/</span><span style="color:#7EE787">table</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;/</span><span style="color:#7EE787">div</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;</span><span style="color:#7EE787">div</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"text-align: center;margin-bottom: 70px;"</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                &lt;</span><span style="color:#7EE787">a</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"padding:10px 40px;border-radius:20px;text-decoration: none;color: #fff;font-family: 'Signika', sans-serif; font-weight: 500;font-size: 16px;background: linear-gradient(to top,#FF0080,#00b5fc);background-color: #FF0080;"</span><span style="color:#79C0FF"> href</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"https://blog1seguimentmydomaine2bra.me/"</span><span style="color:#E6EDF3">&gt;Resgatar Agora&lt;/</span><span style="color:#7EE787">a</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;/</span><span style="color:#7EE787">div</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;</span><span style="color:#7EE787">div</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">                &lt;</span><span style="color:#7EE787">p</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"font-family: 'Signika', sans-serif; font-weight: 300; color: #707070; font-size: 12px; line-height: 18px;"</span><span style="color:#E6EDF3">&gt;&lt;</span><span style="color:#7EE787">img</span><span style="color:#79C0FF"> src</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"icone-rodape.png"</span><span style="color:#79C0FF"> style</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">"float: left;;"</span><span style="color:#79C0FF"> alt</span><span style="color:#E6EDF3">=</span><span style="color:#A5D6FF">""</span><span style="color:#E6EDF3">&gt;Resgate agora mesmo antes que eles expirem! Aproveite, Troque seus pontos por milhas aereas, Descontos de ate 35% no cartão ou milhares de premios em nosso Catalogo.&lt;/</span><span style="color:#7EE787">p</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">            &lt;/</span><span style="color:#7EE787">div</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">        &lt;/</span><span style="color:#7EE787">div</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">    &lt;/</span><span style="color:#7EE787">div</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">&lt;/</span><span style="color:#7EE787">body</span><span style="color:#E6EDF3">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E6EDF3">&lt;/</span><span style="color:#7EE787">html</span><span style="color:#E6EDF3">&gt;</span></span></code></pre></div><iframe class="w-full h-96 border-0 px-6 my-4" sandbox="" src="./EML Analyzer_files/saved_resource.html"></iframe></div><table class="table w-full break-all"><tbody><tr><th class="w-80">Content-Type</th><td>text/html</td></tr><tr><th class="w-80">Extracted URLs</th><td><div class="dropdowns"><div class="dropdown dropdown-end dropdown-hover"><div tabindex="0" role="button" class="btn"><span>https://blog1seguimentmydomaine2bra.me/</span><svg class="svg-inline--fa fa-angle-down w-4 h-4" data-prefix="fas" data-icon="angle-down" role="img" viewBox="0 0 384 512" aria-hidden="true"><path class="" fill="currentColor" d="M169.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 306.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path></svg></div><ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"><li><a><svg class="svg-inline--fa fa-copy w-4 h-4" data-prefix="fas" data-icon="copy" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-200.6c0-17.4-7.1-34.1-19.7-46.2L370.6 17.8C358.7 6.4 342.8 0 326.3 0L192 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-16-64 0 0 16-192 0 0-256 16 0 0-64-16 0z"></path></svg><span>Copy to clipboard</span></a></li><li><a href="https://www.browserling.com/browse/win/7/ie/11/https%3A%2F%2Fblog1seguimentmydomaine2bra.me%2F" target="_blank"><img src="./EML Analyzer_files/faviconV2(1)" alt="favicon" class="w-4 h-4"><span>Browserling</span></a></li><li><a href="https://urlscan.io/search/#task.url%3A%22https%3A%2F%2Fblog1seguimentmydomaine2bra.me%2F%22" target="_blank"><img src="./EML Analyzer_files/faviconV2(2)" alt="favicon" class="w-4 h-4"><span>urlscan.io</span></a></li><li><a href="https://www.virustotal.com/gui/url/6430918073d28df261558c8152523b80f3e69ba86a515718b9ecf5fe123b1221/details" target="_blank"><img src="./EML Analyzer_files/faviconV2(3)" alt="favicon" class="w-4 h-4"><span>VirusTotal</span></a></li></ul></div></div></td></tr><!----><tr><th class="w-80">Extracted domains</th><td><div class="dropdowns"><div class="dropdown dropdown-end dropdown-hover"><div tabindex="0" role="button" class="btn"><span>blog1seguimentmydomaine2bra.me</span><svg class="svg-inline--fa fa-angle-down w-4 h-4" data-prefix="fas" data-icon="angle-down" role="img" viewBox="0 0 384 512" aria-hidden="true"><path class="" fill="currentColor" d="M169.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 306.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path></svg></div><ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"><li><a><svg class="svg-inline--fa fa-copy w-4 h-4" data-prefix="fas" data-icon="copy" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-200.6c0-17.4-7.1-34.1-19.7-46.2L370.6 17.8C358.7 6.4 342.8 0 326.3 0L192 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-16-64 0 0 16-192 0 0-256 16 0 0-64-16 0z"></path></svg><span>Copy to clipboard</span></a></li><li><a href="https://crt.sh/?q=blog1seguimentmydomaine2bra.me" target="_blank"><img src="./EML Analyzer_files/faviconV2(4)" alt="favicon" class="w-4 h-4"><span>crt.sh</span></a></li><li><a href="https://securitytrails.com/domain/blog1seguimentmydomaine2bra.me" target="_blank"><img src="./EML Analyzer_files/faviconV2(5)" alt="favicon" class="w-4 h-4"><span>SecurityTrails</span></a></li><li><a href="https://urlscan.io/domain/blog1seguimentmydomaine2bra.me" target="_blank"><img src="./EML Analyzer_files/faviconV2(2)" alt="favicon" class="w-4 h-4"><span>urlscan.io</span></a></li><li><a href="https://www.virustotal.com/gui/domain/blog1seguimentmydomaine2bra.me/details" target="_blank"><img src="./EML Analyzer_files/faviconV2(3)" alt="favicon" class="w-4 h-4"><span>VirusTotal</span></a></li></ul></div><div class="dropdown dropdown-end dropdown-hover"><div tabindex="0" role="button" class="btn"><span>fonts.googleapis.com</span><svg class="svg-inline--fa fa-angle-down w-4 h-4" data-prefix="fas" data-icon="angle-down" role="img" viewBox="0 0 384 512" aria-hidden="true"><path class="" fill="currentColor" d="M169.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 306.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path></svg></div><ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"><li><a><svg class="svg-inline--fa fa-copy w-4 h-4" data-prefix="fas" data-icon="copy" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-200.6c0-17.4-7.1-34.1-19.7-46.2L370.6 17.8C358.7 6.4 342.8 0 326.3 0L192 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-16-64 0 0 16-192 0 0-256 16 0 0-64-16 0z"></path></svg><span>Copy to clipboard</span></a></li><li><a href="https://crt.sh/?q=fonts.googleapis.com" target="_blank"><img src="./EML Analyzer_files/faviconV2(4)" alt="favicon" class="w-4 h-4"><span>crt.sh</span></a></li><li><a href="https://securitytrails.com/domain/fonts.googleapis.com" target="_blank"><img src="./EML Analyzer_files/faviconV2(5)" alt="favicon" class="w-4 h-4"><span>SecurityTrails</span></a></li><li><a href="https://urlscan.io/domain/fonts.googleapis.com" target="_blank"><img src="./EML Analyzer_files/faviconV2(2)" alt="favicon" class="w-4 h-4"><span>urlscan.io</span></a></li><li><a href="https://www.virustotal.com/gui/domain/fonts.googleapis.com/details" target="_blank"><img src="./EML Analyzer_files/faviconV2(3)" alt="favicon" class="w-4 h-4"><span>VirusTotal</span></a></li></ul></div><div class="dropdown dropdown-end dropdown-hover"><div tabindex="0" role="button" class="btn"><span>fonts.gstatic.com</span><svg class="svg-inline--fa fa-angle-down w-4 h-4" data-prefix="fas" data-icon="angle-down" role="img" viewBox="0 0 384 512" aria-hidden="true"><path class="" fill="currentColor" d="M169.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 306.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path></svg></div><ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"><li><a><svg class="svg-inline--fa fa-copy w-4 h-4" data-prefix="fas" data-icon="copy" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-200.6c0-17.4-7.1-34.1-19.7-46.2L370.6 17.8C358.7 6.4 342.8 0 326.3 0L192 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-16-64 0 0 16-192 0 0-256 16 0 0-64-16 0z"></path></svg><span>Copy to clipboard</span></a></li><li><a href="https://crt.sh/?q=fonts.gstatic.com" target="_blank"><img src="./EML Analyzer_files/faviconV2(4)" alt="favicon" class="w-4 h-4"><span>crt.sh</span></a></li><li><a href="https://securitytrails.com/domain/fonts.gstatic.com" target="_blank"><img src="./EML Analyzer_files/faviconV2(5)" alt="favicon" class="w-4 h-4"><span>SecurityTrails</span></a></li><li><a href="https://urlscan.io/domain/fonts.gstatic.com" target="_blank"><img src="./EML Analyzer_files/faviconV2(2)" alt="favicon" class="w-4 h-4"><span>urlscan.io</span></a></li><li><a href="https://www.virustotal.com/gui/domain/fonts.gstatic.com/details" target="_blank"><img src="./EML Analyzer_files/faviconV2(3)" alt="favicon" class="w-4 h-4"><span>VirusTotal</span></a></li></ul></div></div></td></tr><!----></tbody></table><!----></div></div></section></div>
+    <!-- built files will be auto injected -->
+  
+
+</body></html>
